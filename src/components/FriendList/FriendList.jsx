@@ -1,13 +1,16 @@
 import { FriendListItem } from './FriendListItem';
+import { FrendsContainer, FrendsCard } from './FriendList.styled';
 
 export const FriendList = ({ data }) => {
   //console.log(props);
 
   return (
-    <ul class="friend-list">
-      {data.map(item => (
-        <FriendListItem key={item.id} friendItem={item} />
-      ))}
-    </ul>
+    <FrendsContainer>
+      <FrendsCard>
+        {data.map(item => (
+          <FriendListItem key={item.id} friendItem={item} />
+        ))}
+      </FrendsCard>
+    </FrendsContainer>
   );
 };
